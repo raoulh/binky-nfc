@@ -10,7 +10,7 @@ import (
 
 func discoverBinkyServer() {
 	log.Println("Discover Binky Server")
-	resolver, err := zeroconf.NewResolver(nil)
+	resolver, err := zeroconf.NewResolver(zeroconf.SelectIPTraffic(zeroconf.IPv4))
 	if err != nil {
 		log.Fatalln("Failed to initialize resolver:", err.Error())
 	}
