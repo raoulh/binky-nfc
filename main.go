@@ -1,14 +1,15 @@
 package main
 
 import (
-	"log"
-	"os"
-
 	"github.com/raoulh/acr122u"
 )
 
 func main() {
-	ctx, err := acr122u.EstablishContext()
+
+	// Discover all services on the network
+	discoverBinkyServer()
+
+	/*ctx, err := acr122u.EstablishContext()
 	if err != nil {
 		panic(err)
 	}
@@ -16,6 +17,7 @@ func main() {
 	h := &handler{log.New(os.Stdout, "", 0)}
 
 	ctx.Serve(h)
+	*/
 }
 
 type handler struct {
