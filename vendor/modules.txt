@@ -1,17 +1,34 @@
 # github.com/cenkalti/backoff v2.2.1+incompatible
 github.com/cenkalti/backoff
 # github.com/ebfe/scard v0.0.0-20190212122703-c3d1b1916a95
+## explicit
 github.com/ebfe/scard
+# github.com/gorilla/websocket v1.4.2
+## explicit
+github.com/gorilla/websocket
 # github.com/grandcat/zeroconf v1.0.0
+## explicit
 github.com/grandcat/zeroconf
+# github.com/jawher/mow.cli v1.2.0
+## explicit
+github.com/jawher/mow.cli
+github.com/jawher/mow.cli/internal/container
+github.com/jawher/mow.cli/internal/flow
+github.com/jawher/mow.cli/internal/fsm
+github.com/jawher/mow.cli/internal/lexer
+github.com/jawher/mow.cli/internal/matcher
+github.com/jawher/mow.cli/internal/parser
+github.com/jawher/mow.cli/internal/values
 # github.com/miekg/dns v1.1.27
 github.com/miekg/dns
 # github.com/raoulh/acr122u v0.0.0-20210615162825-83b38e550860
+## explicit
 github.com/raoulh/acr122u
 # golang.org/x/crypto v0.0.0-20191011191535-87dc89f01550
 golang.org/x/crypto/ed25519
 golang.org/x/crypto/ed25519/internal/edwards25519
 # golang.org/x/net v0.0.0-20200114155413-6afb5195e5aa
+## explicit
 golang.org/x/net/bpf
 golang.org/x/net/internal/iana
 golang.org/x/net/internal/socket

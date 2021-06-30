@@ -26,13 +26,13 @@ func DiscoverBinkyServer() (string, error) {
 	entries := make(chan *zeroconf.ServiceEntry)
 	go func(results <-chan *zeroconf.ServiceEntry) {
 		for entry := range results {
-			log.Println(entry)
+			//log.Println(entry)
 			hostConn = fmt.Sprintf("%s:%d", entry.AddrIPv4, entry.Port)
 		}
-		log.Println("No more entries.")
+		//log.Println("No more entries.")
 	}(entries)
 
-	ctx, cancel := context.WithTimeout(context.Background(), time.Second*2)
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second*1)
 	defer cancel()
 	err = resolver.Browse(ctx, "_binky._tcp", "local.", entries)
 	if err != nil {
@@ -44,7 +44,7 @@ func DiscoverBinkyServer() (string, error) {
 	<-ctx.Done()
 
 	if hostConn == "" {
-		return "", fmt.Errorf("No binky server found")
+		return "", fmt.Errorf("no binky server found")
 	}
 
 	return hostConn, nil
