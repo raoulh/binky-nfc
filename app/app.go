@@ -70,6 +70,8 @@ func Run() {
 	}()
 
 	go func() {
+		time.Sleep(1 * time.Second)
+
 		//Switch LED on GPIO11 high
 		gpio.Pin("11").Output().High()
 	}
