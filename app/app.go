@@ -73,8 +73,9 @@ func Run() {
 		time.Sleep(1 * time.Second)
 
 		//Switch LED on GPIO11 high
-		gpio.Pin("11").Output().High()
-	}
+		g := gpio.GPIO{}
+		g.Pin("11").Output().High()
+	}()
 }
 
 //Shutdown all background jobs
