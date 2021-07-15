@@ -11,6 +11,7 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/raoulh/acr122u"
 	"github.com/raoulh/binky-nfc/mdns"
+	"github.com/raoulh/binky-nfc/gpio"
 )
 
 var (
@@ -67,6 +68,11 @@ func Run() {
 			acrCtx.Serve(h)
 		}
 	}()
+
+	go func() {
+		//Switch LED on GPIO11 high
+		gpio.Pin("11").Output().High()
+	}
 }
 
 //Shutdown all background jobs
